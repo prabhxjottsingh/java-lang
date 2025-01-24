@@ -136,4 +136,39 @@ Hello, World!
 
 ---
 
-Feel free to reach out if you have any questions!
+# Java Data Types and Memory Usage
+
+This document provides an overview of the different data types in Java and the memory they occupy in memory.
+
+## 1. **Primitive Data Types**
+
+| Data Type | Size    | Description                                                    |
+| --------- | ------- | -------------------------------------------------------------- |
+| `byte`    | 1 byte  | Stores whole numbers from -128 to 127.                         |
+| `short`   | 2 bytes | Stores whole numbers from -32,768 to 32,767.                   |
+| `int`     | 4 bytes | Stores whole numbers from -2³¹ to 2³¹-1.                       |
+| `long`    | 8 bytes | Stores whole numbers from -2⁶³ to 2⁶³-1.                       |
+| `float`   | 4 bytes | Stores fractional numbers, precision: 6-7 decimal digits.      |
+| `double`  | 8 bytes | Stores fractional numbers, precision: 15-16 decimal digits.    |
+| `char`    | 2 bytes | Stores a single character or Unicode values.                   |
+| `boolean` | 1 bit   | Stores `true` or `false` (size depends on JVM implementation). |
+
+---
+
+## 2. **Non-Primitive (Reference) Data Types**
+
+Non-primitive types include classes, arrays, and interfaces. The size of these types depends on the following factors:
+
+- The object header (typically **12 bytes** for 32-bit JVM or **16 bytes** for 64-bit JVM without compressed references).
+- Memory required for instance variables and references.
+- Alignment (padded to the nearest multiple of 8 bytes).
+
+### Example: Object Memory Calculation
+
+```java
+class Example {
+    int id;         // 4 bytes
+    String name;    // Reference (4 bytes in 32-bit JVM or 8 bytes in 64-bit JVM)
+}
+
+```
