@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Prabhjot Singh",
+    "password": "123456",
+    "hashedPassword": "e10adc",
+    "userId": 1709,
+    "ticketsBooked": [
+      {
+        "ticketId": "1",
+        "sourceStation": "Delhi",
+        "destinationStation": "Mumbai",
+        "dateOfTravel": "2023-10-01",
+        "bookingDate": "2023-09-01",
+        "trainInfo": {
+          "trainId": "",
+          "trainName": "Rajdhani Express",
+          "trainNumber": "12345",
+          "seats": [
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0]
+          ],
+          "stations": ["Delhi", "Mumbai", "Pune", "Goa"],
+          "stationArrivalTime": {
+            "Delhi": "10:00:00",
+            "Mumbai": "12:00:00",
+            "Pune": "14:00:00",
+            "Goa": "16:00:00"
+          }
+        }
+      }
+    ]
+  }
+]
